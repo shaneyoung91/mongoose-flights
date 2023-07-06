@@ -7,7 +7,7 @@ module.exports = {
 }
 
 async function index(req, res) {
-    const allFlights = await Flight.find({})
+    const allFlights = await Flight.find({}).sort({departs: 1})
     res.render('flights/index', {flights: allFlights})
 }
 

@@ -12,11 +12,15 @@ const flightSchema = new Schema ({
         default: 'DEN'
     },
     flightNo: {
-        type: Number
+        type: Number,
+        min: 10,
+        max: 9999
     },
     departs: {
-        type: Date
+        type: Date,
     }
 });
+
+// const sortedFlight = Flight.sort((a, b) => a.departs - b.departs);
 
 module.exports = mongoose.model('Flight', flightSchema);
