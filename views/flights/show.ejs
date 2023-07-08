@@ -65,20 +65,29 @@
     </form>
     <br><br>
     
-    
     <h2>Ticket Information</h2>
-    <table>
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Seat</th>
-            <th>Price</th>
-        </tr>
-        </thead>
-        <tbody>
-    
+        <% if (ticket.length) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Seat Number</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% ticket.forEach(function(t) { %>
+                <tr>
+                    <td><%= t.name %></td>
+                    <td><%= t.seat %></td>
+                    <td>$<%= t.price %></td>
+                </tr>
+                <% }); %>
             </tbody>
         </table>
+        <% } else { %>
+        <h4>No Passengers Yet</h4>
+        <% } %>
     <br><br>
 
     <h2>New Ticket</h2>

@@ -5,6 +5,9 @@ const flightsCtrl = require('../controllers/flights');
 // GET /flights/new
 router.get('/new', flightsCtrl.new)
 
+// DELETE  /flights/:id
+router.delete('/:id', flightsCtrl.delete)
+
 // POST /flights
 router.post('/', flightsCtrl.create)
 
