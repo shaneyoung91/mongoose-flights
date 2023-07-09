@@ -6,7 +6,7 @@ module.exports = {
     new: newTicket
 }
 
-async function newTicket(req, res) {
+function newTicket(req, res) {
     Flight.findById(req.params.id)
     res.render('tickets/new', {flightId: req.params.id})
 }

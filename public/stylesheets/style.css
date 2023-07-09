@@ -1,12 +1,12 @@
 body {
   padding: 50px;
-  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Saira', sans-serif;
+  font-size: 20px;
 }
 
 a {
   color: #00B7FF;
 }
-
 
 table {
   table-layout: fixed;
@@ -25,4 +25,21 @@ td {
 
 nav {
   text-align: center;
+}
+
+img {
+  height: 300px;
+  width: 300px;
+  margin: 5px;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+button, select, input {
+  font-size: 18px;
 }
