@@ -29,7 +29,7 @@ async function show(req, res) {
         title: 'Flight Detail'
     });
     } catch (err) {
-    console.error(err);
+    console.log(err);
     }
 }
 
